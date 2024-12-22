@@ -1,0 +1,28 @@
+[package]
+name = "asura"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.93"
+scraper = "0.21.0"
+vt-plugin = { version = "0.1.0", path = "../vt-plugin", features = ["utils"] }
+waki = "0.5.0"
+wit-bindgen-rt = { version = "0.35.0", features = ["bitflags"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+opt-level = "s"
+debug = false
+strip = true
+lto = true
+
+[package.metadata.component]
+package = "vt:asura"
+
+[package.metadata.component.dependencies]
+
+

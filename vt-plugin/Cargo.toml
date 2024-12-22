@@ -1,0 +1,13 @@
+[package]
+name = "vt-plugin"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.93"
+scraper = "0.21.0"
+waki = "0.5.0"
+wit-bindgen = "0.35.0"
+
+[features]
+utils = []

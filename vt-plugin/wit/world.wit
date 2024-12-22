@@ -1,0 +1,19 @@
+package vt:vt-plugin@0.0.1;
+
+interface types {
+  record manga {
+    id: string,
+    image: string,
+    name: string,
+  }
+  record plugin-error {
+    err:string
+  }
+}
+
+
+
+world vt-plugin {
+  use types.{manga, plugin-error};
+  export get-manga-list: func() -> result<list<manga>, plugin-error>;
+}

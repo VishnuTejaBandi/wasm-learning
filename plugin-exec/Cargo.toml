@@ -1,0 +1,12 @@
+[package]
+name = "plugin-exec"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasmtime = "27.0.0"
+wasmtime-wasi = "27.0.0"
+wasmtime-wasi-http = "27.0.0"
+
+[features]
+utils = []
